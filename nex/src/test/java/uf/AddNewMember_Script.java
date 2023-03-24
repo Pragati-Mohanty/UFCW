@@ -84,12 +84,12 @@ public class AddNewMember_Script extends Base{
 //		
 			
 	
-	
-	@AfterTest
-	public void close()
-	{
-		d.close();
-	}
+//	
+//	@AfterTest
+//	public void close()
+//	{
+//		d.close();
+//	}
 
 
 }
