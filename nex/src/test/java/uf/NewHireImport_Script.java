@@ -44,10 +44,10 @@ public class NewHireImport_Script extends Base {
 
 }
 	
-//	@AfterTest
-//	public void close()
-//	{
-//		d.quit();
-//	}
+	@AfterTest
+	public void close()
+	{
+		d.close();;
+	}
 
 	}
