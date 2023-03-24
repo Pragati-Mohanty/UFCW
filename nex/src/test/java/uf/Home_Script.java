@@ -46,7 +46,7 @@ public class Home_Script extends Base {
 	@AfterTest
 	public void close()
 	{
-		d.close();
+		d.quit();
 	}
 
 }

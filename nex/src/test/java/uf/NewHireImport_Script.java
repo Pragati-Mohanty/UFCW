@@ -2,6 +2,7 @@ package uf;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -42,4 +43,11 @@ public class NewHireImport_Script extends Base {
 		Runtime.getRuntime().exec("C:\\Users\\dell\\Documents\\demo\\newhire.exe");
 
 }
+	
+	@AfterTest
+	public void close()
+	{
+		d.quit();
+	}
+
 	}
