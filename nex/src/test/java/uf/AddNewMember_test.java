@@ -11,7 +11,7 @@ import login.LoginCred;
 import resources.Base;
 import resources.GenericMethods;
 
-public class AddNewMember_Script extends Base{
+public class AddNewMember_test extends Base{
 	
 	@BeforeTest
 	public void loginpage() throws IOException {

@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="uf.AddNewMember_Script">
+      <class name="uf.AddNewMember_test">
         <methods>
-          <include name="Add_NewMember"/>
           <include name="loginpage"/>
+          <include name="Add_NewMember"/>
         </methods>
-      </class> <!-- uf.AddNewMember_Script -->
+      </class> <!-- uf.AddNewMember_test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

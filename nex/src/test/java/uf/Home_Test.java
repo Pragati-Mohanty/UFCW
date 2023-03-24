@@ -2,6 +2,7 @@ package uf;
 
 import java.io.IOException;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -10,7 +11,7 @@ import login.LoginCred;
 import resources.Base;
 import resources.GenericMethods;
 
-public class NewHireImport_Script extends Base {
+public class Home_Test extends Base {
 	
 	@BeforeTest
 	public void loginpage() throws IOException {
@@ -24,30 +25,28 @@ public class NewHireImport_Script extends Base {
 		s.username().sendKeys("MANISH@VELARIUM.COM");
 		s.password().sendKeys("N3xtw0rld");
 		s.signinbtn().click();
+		System.out.println("Tittle :" + d.getCurrentUrl());
 	}
-	
+
 	@Test
-	public void NewHireImport() throws InterruptedException, IOException 
+	public void homeSearch() throws InterruptedException 
 	{
 		
-		MainMenu mm = new MainMenu(d);
-		mm.ImportMenu().click();
-		Newhireimport nhi = new Newhireimport(d);
-		nhi.importnewhire().click();
-		
-//		nhi.NHupload().click();;
-		GenericMethods gm= new GenericMethods();
-		gm.hover(nhi.NHupload());
-		Thread.sleep(3000);;
-//		
-		Runtime.getRuntime().exec("C:\\Users\\dell\\Documents\\demo\\newhire.exe");
-
-}
+		Home hp = new Home(d);
+		hp.HomeFirstname().sendKeys("bo");
+		hp.Homesearchbutton().click();
+		Thread.sleep(2000);
+//		JavascriptExecutor js = (JavascriptExecutor) d;
+//		js.executeScript("window.scrollBy(0,250)", "");
+		GenericMethods g = new GenericMethods();
+		g.scroll(650);
+	}
+	
 	
 	@AfterTest
 	public void close()
 	{
-		d.close();;
+		d.close();
 	}
 
-	}
+}
